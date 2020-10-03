@@ -17,6 +17,13 @@ public class SetOperations {
 
     }
 
+    /**
+     * This method takes as input two sets, and returns a boolean value, that determines if the first set is a subset of the second.
+     * @param firstSet The set that is being evaluated
+     * @param secondSet The set that is being used by the first one.
+     * @return boolean depending on value
+     */
+
     public static boolean isSubSet(Set firstSet, Set secondSet){
         boolean subset = false;
         for(int firstItem = 0; firstItem<firstSet.getSize(); firstItem++){
