@@ -97,7 +97,7 @@ public class SetOperations {
     private static void powerSet(Set set, Set r, Set t) {
         if(!isSubSet(set,r)) {
             for (int i = 0; i < set.getSize(); i++) {
-                r.add(valueToSet(set.get(i)));
+                r.add(set.get(i));
             }
         }
         for(int i = 0; i< set.getSize();i++){

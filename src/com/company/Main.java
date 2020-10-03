@@ -47,6 +47,7 @@ public class Main {
         C.add("4");
         C.add("8");
         C.add("9");
+        C.add("7");
 
         C.print();
 
@@ -58,7 +59,7 @@ public class Main {
         U.add("8");
         U.add("9");
 
-        SetOperations.cartesianProduct(A,C).print();
-        System.out.println(SetOperations.powerSet(U).getSize());
+        SetOperations.difference(SetOperations.powerSet(C), A).print();
+
     }
 }
