@@ -17,6 +17,12 @@ public class SetOperations {
 
     }
 
+    /**
+     * Voy a poner una burrada para probar
+     * @param firstSet primera mierda
+     * @param secondSet segunda mierda
+     * @return bool
+     */
     public static boolean isSubSet(Set firstSet, Set secondSet){
         boolean subset = false;
         for(int firstItem = 0; firstItem<firstSet.getSize(); firstItem++){
