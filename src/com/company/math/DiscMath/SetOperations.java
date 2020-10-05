@@ -1,5 +1,6 @@
 package com.company.math.DiscMath;
 
+import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 
 public class SetOperations {
@@ -97,7 +98,11 @@ public class SetOperations {
             Set t = new Set("T");
             powerSet(set,R,t);
         }
-
+        for(int i= 0; i<R.getSize();i++){
+            if(i>set.getSize()){
+                R.replace(i,valueToSet(R.get(i)));
+            }
+        }
         return R;
     }
 
@@ -110,9 +115,9 @@ public class SetOperations {
         for(int i = 0; i< set.getSize();i++){
             for(int e = 1; e<set.getSize();e++){
                 if(i!=e) {
-                    String item = set.get(e)+set.get(i);
+                    String item = set.get(e)+","+set.get(i);
                     if(!r.contains(item)) {
-                        String data = set.get(i) + set.get(e);
+                        String data = set.get(i) +","+ set.get(e);
                         r.add(data);
                         t.add(data);
                     }
@@ -124,7 +129,7 @@ public class SetOperations {
             for(int e = 0; e< set.getSize();e++) {
                 String item = set.get(e);
                 if (!t.get(i).contains(item)) {
-                    String data = t.get(i) + set.get(e);
+                    String data = t.get(i) +","+ set.get(e);
                     if (!isPermutation(data, r)) {
                         r.add(data);
                         t.add(data);

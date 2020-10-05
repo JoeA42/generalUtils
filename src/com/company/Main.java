@@ -59,7 +59,7 @@ public class Main {
         U.add("8");
         U.add("9");
 
-        SetOperations.difference(SetOperations.powerSet(C), A).print();
+        SetOperations.powerSet(C).print();
 
     }
 }

@@ -28,6 +28,10 @@ public class Set {
         return name;
     }
 
+    public void replace(int index, String value) {
+        this.data.set(index,value);
+    }
+
     public void setName(String name) {
         this.name = name;
     }
